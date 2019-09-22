@@ -1,0 +1,32 @@
+//Given a number print its factorial using recursion and iteration.
+
+#include<stdio.h>
+int factorial(int);
+void main()
+{
+int n,x,fact=1,i;
+scanf("%d",&n);
+//factorial using iterationion
+for(i=1;i<=n;i++)
+{
+fact=fact*i;
+}
+printf("%d using recursion",fact);
+x=factorial(n);
+printf("%d using recursion",x);
+}
+//factorial using recursion
+int factorial(int n)
+{
+int i;
+if(n==0||n==1)
+{
+return 1;
+}
+else
+return(n*factorial(n-1));
+}
+//Output:
+//5
+//120 using iteration
+//120 using recursion
