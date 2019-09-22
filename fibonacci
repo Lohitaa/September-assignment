@@ -1,0 +1,43 @@
+//Fibonacci sequence
+#include<stdio.h>
+void iter_fib(int n);
+void rec_fib(int a,int b,int n);
+int main()
+{
+int a=0,b=1,n;
+printf("enter n");
+scanf("%d",&n);
+printf("iterative fibonacci");
+iter_fib(n);
+printf("recursive");
+printf("\n %d \t %d",a,b);
+rec_fib(a,b,n-2);
+printf("\n");
+return 0;
+}
+void iter_fib(int n)
+{
+int a=0,b=1,c,i;
+for(i=0;i<n;i++)
+{
+if(i<=1)
+c=i;
+else
+{
+c=a+b;
+a=b;
+b=c;
+}
+printf("%d \t",c);
+}
+}
+void rec_fib(int a,int b,int n)
+{
+int c;
+if(n==0)
+return;
+n--;
+c+a+b;
+printf("\t %d",c);
+rec_fib(b,c,n);
+}
